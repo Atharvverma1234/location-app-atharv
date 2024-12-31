@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Delivery Location Project - By Atharv Verma
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project allows users to select and save their delivery location using the Google Maps API. The project includes features such as location search, geolocation, an address form for additional details, and an address management page.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+1. **Location Selection**:
+   - Users can enable their location using the browser's geolocation feature.
+   - Alternatively, users can manually search for their location using Google Maps.
 
-### `npm start`
+2. **Address Form**:
+   - Users can enter specific address details such as house/flat/block number and area.
+   - Users can categorize the address (e.g., Home, Office, Friends & Family).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **Address Management**:
+   - View a list of saved addresses.
+   - Update or delete saved addresses.
+   - Search for recent addresses or add a new one.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Backend Integration**:
+   - The project connects to a Node.js backend server to save and retrieve addresses.
 
-### `npm test`
+## Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (>= 14.x)
+- React.js (>= 18.x)
+- Google Maps API Key
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend Setup
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo.git
+   cd your-repo/backend
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Start the server:
+   ```bash
+   node server.js
+   ```
+   The backend will run on `http://localhost:5000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Frontend Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Navigate to the frontend directory:
+   ```bash
+   cd your-repo/frontend
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Start the React app:
+   ```bash
+   npm start
+   ```
+   The frontend will run on `http://localhost:3000`.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Open the application in your browser (`http://localhost:3000`).
+2. Select your location using geolocation or manual search.
+3. Enter specific address details and categorize them.
+4. Manage your saved addresses using the "Address Management" page.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Additional Features Implemented
 
-### Code Splitting
+1. **Real-Time Map Pin Adjustment**:
+   - Users can fine-tune their location by dragging the map pin.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Locate Me Button**:
+   - A "Locate Me" button enables users to find their current location automatically.
 
-### Analyzing the Bundle Size
+3. **Address Validation**:
+   - The form validates that all fields are filled before submission.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. **Persistent Storage**:
+   - Saved addresses are stored on the backend for persistence.
 
-### Making a Progressive Web App
+## File Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+project/
+├── backend/
+│   ├── server.js  # Node.js backend
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── LocationModal.js
+│   │   │   ├── MapComponent.js
+│   │   │   ├── AddressForm.js
+│   │   │   ├── AddressManagement.js
+│   │   ├── App.js
+│   ├── package.json
+├── README.md
+```
 
-### Advanced Configuration
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Frontend
+- React
+- Axios
 
-### Deployment
+### Backend
+- Express
+- Body-Parser
+- CORS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Notes
 
-### `npm run build` fails to minify
+- Ensure that the backend server is running before starting the frontend.
+- Make sure the Google Maps API Key has the necessary permissions enabled (e.g., Geocoding API, Maps JavaScript API).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Improvements
+
+1. **Database Integration**:
+   - Replace in-memory storage with a database like MongoDB or MySQL.
+
+2. **User Authentication**:
+   - Allow users to log in and manage their addresses securely.
+
+3. **Mobile Responsiveness**:
+   - Optimize the interface for mobile devices.
+
+## Creation
+
+Created by Atharv Verma,
+
+
+## Screen Recording 
+
+
+https://github.com/user-attachments/assets/ed53abc0-e29f-4aff-b5db-a50288be9686
+
